@@ -7,8 +7,8 @@
     "start": "node server.js",
     "server": "nodemon server",
     "vercel-build": "npm run postbuild && cd client && npm run vercel-build",
-    "install-client": "cd client && npm install",
-    "postbuild": "npm install && npm run install-client"
+    "install-client": "cd client && npm install --legacy-peer-deps",
+    "postbuild": "npm install --legacy-peer-deps && npm run install-client"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
     "nodemon": "^2.0.19"
   },
   "engines": {
-    "node": "16.14.2",
-    "npm": "8.13.1"
+    "node": "16.20.2",
+    "npm": "8.19.4"
   }
 }
