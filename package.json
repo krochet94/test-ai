@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server",
-    "vercel-build": "npm run postbuild && cd client && npm run vercel-build",
+    "vercel-build": "npm run vercel-postbuild && cd client && npm run build",
     "install-client": "cd client && npm install --legacy-peer-deps",
-    "postbuild": "npm install --legacy-peer-deps && npm run install-client"
+    "vercel-postbuild": "npm install && npm run install-client"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +17,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "nodemon": "^3.0.1",
     "openai": "^3.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^^3.0.1"
   }
 }
